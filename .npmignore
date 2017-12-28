@@ -1,0 +1,12 @@
+.idea
+.node-persist
+.travis.yml
+*.bash_profile
+*.test.ts
+*.test.tsx
+docs
+node_modules
+src
+package-lock.json
+tslint.json
+yarn.lock
