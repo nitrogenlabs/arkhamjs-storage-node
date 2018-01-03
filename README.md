@@ -10,12 +10,15 @@
 ### Installation
 
 Using [npm](https://www.npmjs.com/):
+
 ```bash
-$ npm install --save arkhamjs-storage-node
+$ npm install --save @nlabs/arkhamjs-storage-node
 ```
+
 or
+
 ```bash
-$ yarn add arkhamjs-storage-node
+$ yarn add @nlabs/arkhamjs-storage-node
 ```
 
 #### Documentation
