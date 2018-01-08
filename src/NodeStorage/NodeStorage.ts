@@ -33,7 +33,7 @@ export class NodeStorage {
   };
 
   constructor(options: NodeStorageOptions = {}) {
-    //Methods
+    // Methods
     this.clearStorageData = this.clearStorageData.bind(this);
     this.getStorageData = this.getStorageData.bind(this);
     this.setStorageData = this.setStorageData.bind(this);
