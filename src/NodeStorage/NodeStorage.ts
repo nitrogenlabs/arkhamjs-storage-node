@@ -33,6 +33,12 @@ export class NodeStorage {
   };
 
   constructor(options: NodeStorageOptions = {}) {
+    //Methods
+    this.clearStorageData = this.clearStorageData.bind(this);
+    this.getStorageData = this.getStorageData.bind(this);
+    this.setStorageData = this.setStorageData.bind(this);
+
+    // Configuration
     this.options = {...this.options, ...options};
     PersistStorage.initSync(this.options);
   }

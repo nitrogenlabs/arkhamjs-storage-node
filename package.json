@@ -1,25 +1,29 @@
 {
   "name": "@nlabs/arkhamjs-storage-node",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NodeJS storage for ArkhamJS",
   "license": "MIT",
   "main": "index.js",
   "types": "./lib/index.d.ts",
-  "keywords": ["arkhamjs", "flux", "node", "nitrogenlabs", "storage"],
-  "author":
-    "Giraldo Rosales <giraldo@nitrogenlabs.com> (http://nitrogenlabs.com/)",
+  "keywords": [
+    "arkhamjs",
+    "flux",
+    "node",
+    "nitrogenlabs",
+    "storage"
+  ],
+  "author": "Giraldo Rosales <giraldo@nitrogenlabs.com> (http://nitrogenlabs.com/)",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/nitrogenlabs/arkhamjs-storage-node.git"
   },
-  "homepage": "http://www.arkhamjs.com",
+  "homepage": "http://www.arkhamjs.io",
   "bugs": {
     "url": "https://github.com/nitrogenlabs/arkhamjs-storage-node/issues"
   },
   "scripts": {
     "compile": "tsc",
-    "docs":
-      "typedoc --target ES5 --module commonjs --out docs/ src/ --exclude src/index.ts --excludeExternals --hideGenerator",
+    "docs": "typedoc --target ES5 --module commonjs --out docs/ src/ --exclude src/index.ts --excludeExternals --hideGenerator",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "prepublishOnly": "NODE_ENV=production npm test && npm run compile",
     "pretest": "npm run lint",
@@ -40,14 +44,25 @@
     "typescript": "^2.6.2"
   },
   "jest": {
-    "moduleFileExtensions": ["ts", "tsx", "js"],
-    "setupFiles": ["<rootDir>/jest.setup.js"],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "tsx"
+    ],
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ],
     "testURL": "http://localhost",
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testMatch": ["<rootDir>/src/**/*test.ts?(x)"],
-    "testPathIgnorePatterns": ["<rootDir>/node_modules/", "<rootDir>/dist/"],
+    "testMatch": [
+      "<rootDir>/src/**/*test.ts?(x)"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/dist/"
+    ],
     "verbose": false
   },
   "directories": {
