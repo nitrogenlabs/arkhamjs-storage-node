@@ -4,4 +4,7 @@
  */
 
 // Storage
-export {NodeStorage} from './NodeStorage/NodeStorage';
+import {NodeStorage} from './NodeStorage/NodeStorage';
+import {NodeStorageOptions} from './types/main';
+
+export {NodeStorage, NodeStorageOptions};
