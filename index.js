@@ -4,5 +4,4 @@
  */
 'use strict';
 
-var ArkhamStorage = require('./lib/NativeStorage/NativeStorage');
-exports.NativeStorage = ArkhamStorage.NativeStorage;
+module.exports = require('./lib');

@@ -22,50 +22,24 @@
     "url": "https://github.com/nitrogenlabs/arkhamjs-storage-node/issues"
   },
   "scripts": {
-    "compile": "tsc",
-    "docs": "typedoc --target ES5 --module commonjs --out docs/ src/ --exclude src/index.ts --excludeExternals --hideGenerator",
-    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
-    "prepublishOnly": "NODE_ENV=production npm test && npm run compile",
-    "pretest": "npm run lint",
-    "test": "jest"
+    "build": "lex compile -r",
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "prepublishOnly": "yarn test && yarn build",
+    "pretest": "yarn lint",
+    "reset": "lex clean && yarn",
+    "test": "lex test - s ./jest.setup.js",
+    "update": "lex update -i"
   },
   "typings": "dist/index",
   "dependencies": {
-    "node-persist": "^2.1.0"
+    "node-persist": "^3.0.1"
   },
   "devDependencies": {
-    "@types/jest": "^21.1.9",
-    "@types/node": "^8.5.2",
-    "jest": "^22.0.4",
-    "ts-jest": "^22.0.0",
-    "tslint": "^5.8.0",
-    "tslint-eslint-rules": "^4.1.1",
-    "typedoc": "^0.9.0",
-    "typescript": "^2.6.2"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "ts",
-      "tsx"
-    ],
-    "setupFiles": [
-      "<rootDir>/jest.setup.js"
-    ],
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "testMatch": [
-      "<rootDir>/src/**/*test.ts?(x)"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules/",
-      "<rootDir>/dist/"
-    ],
-    "verbose": false
-  },
-  "directories": {
-    "doc": "docs"
+    "@types/jest": "^23.1.1",
+    "@types/node": "^10.3.4",
+    "@types/node-persist": "^0.0.33",
+    "eslint": "^4.19.1",
+    "eslint-config-styleguidejs": "^0.7.5",
+    "typescript": "^2.9.2"
   }
 }

@@ -3,18 +3,20 @@
  * Copyrights licensed under the MIT License. See the accompanying LICENSE file for terms.
  */
 
-import * as PersistStorage from 'node-persist';
+import PersistStorage from 'node-persist';
+
 import {NodeStorage} from './NodeStorage';
 
 describe('NodeStorage', () => {
-  const items = {};
+  beforeAll(() => {
+    new NodeStorage();
+  });
 
   describe('.delPersistData', () => {
     let storageSpy;
 
     beforeAll(() => {
       // Spy
-      PersistStorage.initSync();
       storageSpy = jest.spyOn(PersistStorage, 'removeItem');
     });
 
