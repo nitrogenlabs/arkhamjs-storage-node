@@ -1,6 +1,6 @@
 {
   "name": "@nlabs/arkhamjs-storage-node",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "NodeJS storage for ArkhamJS",
   "license": "MIT",
   "main": "index.js",
