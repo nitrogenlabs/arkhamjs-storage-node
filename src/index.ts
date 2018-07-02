@@ -5,6 +5,6 @@
 
 // Storage
 import {NodeStorage} from './NodeStorage/NodeStorage';
-import {NodeStorageOptions} from './types/main';
 
-export {NodeStorage, NodeStorageOptions};
+export * from './types/main';
+export {NodeStorage};
